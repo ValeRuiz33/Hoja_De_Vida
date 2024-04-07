@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida</title>
+    <div style="text-align: center;">
+        <header>
+            <h1>Hoja de vida</h1>
+            <!-- <div class="background"></div> -->
+        </header>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file">
+        </form>
+        <br>
+        <br>
+        <input type="text" id="nombre" name="nombre" style="width: 200px;" placeholder="Escriba su nombre"/>
+        <br>
+        <br>
+        <input type="text" id="nombre" name="nombre" style="width: 200px;" placeholder="Escriba de postulacion"/>
+    </div>
+    <link rel="stylesheet" href="Cv.css">
+
+
+</head>
+<body>
+    <div class="sidebardescripcion">
+
+
+    </div>
+    <div class="sidebar">
+            <ul class="contact-info">
+            <h3>Información personal</h2>
+                <div style="display: inline-block;">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 10px;">
+                            <label style="font-weight: bold; display: inline-block; width: 120px;" for="nombre">Nombres:</label>
+                            <input type="text" id="nombre" name="nombre" style="width: 200px;" placeholder="Escriba su nombre"/>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <label style="font-weight: bold; display: inline-block; width: 120px;" for="apellido">Apellidos:</label>
+                            <input type="text" id="apellido" name="apellido" style="width: 200px;" placeholder="Escriba su apellido"/>
+                        </li>
+                        <li>
+                            <label style="font-weight: bold; display: inline-block; width: 120px;  white-space: nowrap;" for="tipoDocumento">Tipo de documento:</label>
+                            <select id="tipoDocumento" name="tipoDocumento" style="width: 200px;" >
+                                <option value="CC">Cédula de ciudadania</option>
+                                <option value="CE">Cédula de extrangeria</option>
+                                <option value="TI">Tarjeta de identidad</option>
+                                <option value="PS">Pasaporte</option>
+                            </select>
+                        </li>
+                        <li> <label style="font-weight: bold;  display: inline-block; width: 120px;  white-space: nowrap;" for="ndocumento">Numero de documento: </label>
+                            <input type="number" id="NDocumento" name="NDocumento" style="width: 200px;" placeholder="Escriba su documento"/>
+                        </li>
+                        <li>
+                            <div style="display: inline-block;">
+                                <label style="font-weight: bold; width: 120px; white-space: nowrap;" for="fechaN">Fecha de nacimiento:</label>
+                                <input type="date" id="FNacimiento" name="FNacimiento" style="width: 200px; margin-top: 10px;" placeholder="Escriba su fecha de nacimiento"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+                <h3>Habilidades</h2>
+                    <div style="display: inline-block;">
+                        <ul>
+                            <li><input type="text" id="habilidad1" name="habilildad1" style="width: 200px;" placeholder="Escriba sus habilidades"></li>
+                        </ul>
+                </div>
+                <h3>Idiomas</h2>
+                    <div style="display: inline-block;">
+                        <ul>
+                            <li><input type="text" id="idiomas" name="idioma" style="width: 200px;" placeholder="Escriba sus idiomas"></li>
+                        </ul>
+                </div>
+                <h3>Contacto</h2>
+                    <div style="display: inline-block;">
+                        <ul>
+                            <li style="margin-bottom: 10px;">
+                                <label style="font-weight: bold; display: inline-block; width: 120px;" for="celular">Celular:</label>
+                                <input type="number" id="celular" name="celular" style="width: 200px;" placeholder="Escriba su numero de celular"/>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <label style="font-weight: bold; display: inline-block; width: 120px;" for="tel">Telefono:</label>
+                                <input type="number" id="tel" name="tel" style="width: 200px;" placeholder="Escriba su telefono fijo"/>
+                            </li>
+                            <li> <label style="font-weight: bold;  display: inline-block; width: 120px;  white-space: nowrap;" for="email">Correo electronico: </label>
+                                <input type="email" id="email" name="email" style="width: 200px;" placeholder="Escriba su correo electronico"/>
+                            </li>
+                        </ul>
+                    </div>
+                <h3>Referencias personales</h2>
+                    <div style="display: inline-block;">
+                        <ul>
+                            <li style="margin-bottom: 10px;">
+                                <label style="font-weight: bold; display: inline-block; width: 120px;" for="nR">Nombre:</label>
+                                <input type="text" id="nR" name="nR" style="width: 200px;" placeholder="Escriba nombre de su referencia"/>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <label style="font-weight: bold; display: inline-block; width: 120px;" for="celularF">Celular:</label>
+                                <input type="number" id="celularF" name="celularF" style="width: 200px;" placeholder="Escriba numero de celular"/>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                <div class="sidebarH">
+                    <ul class="Personal-info">
+                        <h3>Descripción personal</h3>
+                            <div style="display: inline-block;"> 
+                                <ul>
+                                    <li>
+                                        <textarea id="descripcion"  name="descripcion_personal" style="width: 950px; height: 90px;" placeholder="Escriba su descripcion personal" ></textarea>
+                                    </li>
+                                </ul> 
+                            </div>
+                                
+                        <h3>Formacion educativa</h3>
+                            <div style="display: inline-block;">
+                                <ul>
+                                    <li>
+                                        <label for="name">Nombre del grado o titulo obtenido: </label>
+                                        <input type="number" id="educación1" name="educación1" />
+                                    </li>
+                                    <li>
+                                        <label for="name">Nombre del grado o titulo obtenido: </label>
+                                        <input type="number" id="educación2" name="educación2" />
+                                    </li>
+                                    <li>
+                                        <label for="name">Nombre del grado o titulo obtenido: </label>
+                                        <input type="number" id="educación3" name="educación3" />
+                                    </li>
+                                </ul>
+                            </div>
+
+                        <h2>Experiencia</h2>
+                            <div style="display: flex; flex-direction: column;">
+                                <ul>
+                                    <li>
+                                        <label style="font-weight: bold; display: inline-block; width: 200px;" for="PC">#1 Puesto ocupado:</label>
+                                        <input type="text" id="PC" name="PC" style="width: 200px;" placeholder="Escriba su puesto"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="NE">Nombre de la empresa:</label>
+                                        <input type="text" id="NE" name="NE" style="width: 200px;" placeholder="Escriba nombre de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="C">Ciudad:</label>
+                                        <input type="text" id="C" name="C" style="width: 200px;" placeholder="Escriba ciudad de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style=" display: inline-block; width: 200px;" for="Tel">Telefono:</label>
+                                        <input type="number" id="Tel" name="Tel" style="width: 200px;" placeholder="Escriba telefono de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="direccion">Dirección:</label>
+                                        <input type="text" id="direccion" name="direccion" style="width: 200px;" placeholder="Escriba dirección de la empresa"/>
+                                        
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <label style="font-weight: bold; display: inline-block; width: 200px;" for="PC">#2 Puesto ocupado:</label>
+                                        <input type="text" id="PC" name="PC" style="width: 200px;" placeholder="Escriba su puesto"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="NE">Nombre de la empresa:</label>
+                                        <input type="text" id="NE" name="NE" style="width: 200px;" placeholder="Escriba nombre de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="C">Ciudad:</label>
+                                        <input type="text" id="C" name="C" style="width: 200px;" placeholder="Escriba ciudad de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style=" display: inline-block; width: 200px;" for="Tel">Telefono:</label>
+                                        <input type="number" id="Tel" name="Tel" style="width: 200px;" placeholder="Escriba telefono de la empresa"/>
+                                    </li>
+                                    <li>
+                                        <label style="display: inline-block; width: 200px;" for="direccion">Dirección:</label>
+                                        <input type="text" id="direccion" name="direccion" style="width: 200px;" placeholder="Escriba dirección de la empresa"/>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn-neon" button="submit" onclick="guardarDatos()">Guardar</button>
+                </div>
+            </ul>
+      </div>
+
+    
+
+
+
+
+</body>
+</html>

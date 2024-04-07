@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y registrase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="login">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Log in</label>
+                    <input class="input" id="emailInput" type="email" autocomplete="off" name="email"
+                    placeholder="Email" required="">
+                    <span id="emailError" class="error"></span>
+                    <input class="input" id="passwordInput" type="password" autocomplete="off" name="pswd"
+                    placeholder="Password" required="">
+                    <span id="passwordError" class="error"></span>
+                    <button  onclick="validateAndRedirect()" type="button">Log in</button>
+                </form>
+            </div>
+
+            <div class="register">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Register</label>
+                    <input class="input" type="text" name="txt" placeholder="Username"
+                    autocomplete="off" required="">
+                    <input class="input" type="email" name="email" 
+                    placeholder="Email" autocomplete="off" required="">
+                    <input class="input" type="password" name="pswd" 
+                    placeholder="Password" autocomplete="off" required="">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <script>
+
+                function validateAndRedirect() {
+                    var email = document.getElementById('emailInput').value;
+                    var password = document.getElementById('passwordInput').value;
+                    var emailError = document.getElementById('emailError');
+                    var passwordError = document.getElementById('passwordError');
+                    
+                    if (email.trim() === '') {
+                        emailError.innerText = 'Por favor, completa este campo.';
+                    } else {
+                        emailError.innerText = '';
+                    }
+            
+                    if (password.trim() === '') {
+                        passwordError.innerText = 'Por favor, completa este campo.';
+                    } else {
+                        passwordError.innerText = '';
+                    }
+            
+                    if (email.trim() !== '' && password.trim() !== '') {
+                        window.location.replace('CV.html');
+                    }
+                }
+            </script>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
